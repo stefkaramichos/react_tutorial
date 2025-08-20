@@ -9,7 +9,10 @@ const useFetch = (url) => {
     useEffect( () => {
         const abortCont = new AbortController();
 
+        setIsPending(true);
+
         setTimeout(() => {
+            console.log(isPending);
             fetch(url , { signal: abortCont.signal })
             .then((res) => {
                 if(!res.ok){
@@ -29,7 +32,7 @@ const useFetch = (url) => {
                     setIsPending(false);
                 }
             })
-        },1000);
+        },400);
 
         return () => {
             abortCont.abort();

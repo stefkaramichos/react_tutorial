@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Link to="/" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Home' && 'active-link-menu'} >Home</Link>
                 <Link to="/create" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'New Blog' && 'active-link-menu'}>New Blog</Link> 
                 <Link to="/colorpicker" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Color Picker' && 'active-link-menu'}>Color Picker</Link> 
-                <Link to="/search" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Search' && 'active-link-menu'}>Live Search</Link> 
+                <Link to="/search" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Live Search' && 'active-link-menu'}>Live Search</Link> 
             </div>
         </nav>
      );

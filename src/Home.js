@@ -110,17 +110,17 @@ const Home = () => {
             <button className="btn" onClick={handleAge}>Increase Age</button>
   
             { error && <div>{ error }</div> }
-            { isPending &&  <div>Loading...</div> }
+            { isPending &&  <div><img width="80" src="/Loading_icon.gif"/></div> }
             { data && <List list={data} title = "test title" changeClikedValue={changeClikedValue} clicked={clicked}   />}
             
-            <div className="todos">
+            {/* <div className="todos">
                 {todos.filter( (item) => item.id == 1 || item.id == 2 ).map((todo) => (
                     <div key={todo.id}>
                         <h2>{todo.title}</h2>
                         <p>Completed: {todo.completed ? "yes" : "no"}</p>
                     </div>
                 ))}
-            </div>
+            </div> */}
             {/* <List list={blogs.filter( (blog) => blog.author == 'mario' )} title = "steef's blogs" /> */}
 
             {/* <form  onSubmit={(e) => {handleFormSubmit(e)}}>

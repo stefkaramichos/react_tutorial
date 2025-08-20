@@ -11,7 +11,7 @@ const BlogDetails = () => {
   return (
     <div className="blog-details">
       {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
+      {isPending && <div><img width="80" src="/Loading_icon.gif"/></div>}
       {data && (
         <div className="blog">
           <h2>{data.title}</h2>

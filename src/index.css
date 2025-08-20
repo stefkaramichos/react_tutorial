@@ -56,6 +56,13 @@
   color: #f1356d;
   margin-bottom: 10px;
 }
+
+.search{
+  >h2{
+    margin-bottom: 20px;
+  }
+}
+
 .blog-details div {
   margin: 20px 0;
 }
