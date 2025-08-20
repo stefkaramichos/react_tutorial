@@ -8,11 +8,13 @@ const Search = () => {
     const [dataReady, setLoading] = useState(false);
 
     const searchData = (e) => {
+
         setSearch(e.target.value);
+      
         e.preventDefault();
         setLoading(false);
         setTimeout(() => {
-            fetch(`https://jsonplaceholder.typicode.com/posts?title_like=${search}`, {
+            fetch(`https://jsonplaceholder.typicode.com/posts?title_like=${e.target.value}`, {
             method: 'GET',  
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +49,7 @@ const Search = () => {
                         <p>{blog.body}</p>
                         <p>Written by User {blog.userId}</p>
                     </div>
-                )) : <div>no data found</div> : <div>Loading...</div> : <div>Search for blogs</div>
+                )) : <div>no data found</div> : <div><img width="80" src="Loading_icon.gif"/></div> : <div>Search for blogs</div>
                 } 
             </div>
         </div>
