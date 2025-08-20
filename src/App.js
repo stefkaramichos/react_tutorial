@@ -5,6 +5,8 @@ import Create from './Create';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
+import ColorPicker from './ColorPicker';
+import Search from './Search';
 
 function App() {
   const title = "Welcome to the new blog";
@@ -26,6 +28,12 @@ function App() {
           </Route>
           <Route exact path="/blogs/:id">
             <BlogDetails />
+          </Route>
+          <Route exact path="/colorpicker">
+            <ColorPicker />
+          </Route>
+           <Route exact path="/search">
+            <Search />
           </Route>
           <Route path="*">
              <NotFound />

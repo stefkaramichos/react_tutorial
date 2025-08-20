@@ -55,7 +55,12 @@ const Home = () => {
     }
 
     const handleClick = (e) => {
-        setName('luigi');
+        if (name === 'mario') {
+            setName('luigi');
+        } else {
+            setName('mario');
+        }
+        
         console.log('Button clicked! ' + name, e.target);
     };  
 

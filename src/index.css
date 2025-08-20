@@ -25,9 +25,7 @@
   text-decoration: none;
   padding: 6px;
 }
-.navbar a:hover {
-  color: #f1356d;
-}
+
 .content {
   max-width: 600px;
   margin: 40px auto;
@@ -100,4 +98,28 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.color-picker{
+  h2{
+    margin-bottom: 20px;
+  }
+  .selected-color{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+    transition: 2s easy-in-out;
+  }
+}
+
+.active-link-menu{
+  color: white;
+  background-color: #f1356d;
+  border-radius: 8px;
 }

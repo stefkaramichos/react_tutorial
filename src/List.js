@@ -11,7 +11,7 @@ const List = ( { list, title, clicked, changeClikedValue } ) => {
                     <h2 className={ clicked === index ? 'active' : ''} onClick={ () => changeClikedValue(index) }>{item.title}</h2> 
                     </Link>
                     {/* <button onClick={() => { deleteBlog(item.id) }}>Delete blog</button> */}
-                    <Button textButton={item.title} />
+                    {/* <Button textButton={item.title} /> */}
                 </div>
             ))}
             <p>{title}</p>
