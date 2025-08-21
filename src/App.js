@@ -7,6 +7,8 @@ import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import ColorPicker from './ColorPicker';
 import Search from './Search';
+import HandleElements from './HandleElements';
+
 
 function App() {
   const title = "Welcome to the new blog";
@@ -32,8 +34,11 @@ function App() {
           <Route exact path="/colorpicker">
             <ColorPicker />
           </Route>
-           <Route exact path="/search">
+          <Route exact path="/search">
             <Search />
+          </Route>
+          <Route exact path="/handle">
+            <HandleElements />
           </Route>
           <Route path="*">
              <NotFound />

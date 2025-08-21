@@ -1,22 +1,21 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useLocation } from "react-router-dom";
+
 
 const Navbar = () => {
    
-    const [activeLink, setActiveLink] = useState('Home');
-
-    const handleLinkClass = (e) => {
-        setActiveLink(e.target.textContent);
-    }
+    let location = useLocation();
 
     return ( 
         <nav className="navbar">
             <h1>Stef Karamichos</h1> 
             <div className="links">
-                <Link to="/" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Home' && 'active-link-menu'} >Home</Link>
-                <Link to="/create" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'New Blog' && 'active-link-menu'}>New Blog</Link> 
-                <Link to="/colorpicker" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Color Picker' && 'active-link-menu'}>Color Picker</Link> 
-                <Link to="/search" onClick={ (e) => handleLinkClass(e) }  className= {activeLink == 'Live Search' && 'active-link-menu'}>Live Search</Link> 
+                <Link to="/"   className= {location.pathname == '/' && 'active-link-menu'} >Home</Link>
+                <Link to="/create"  className= {location.pathname == '/create' && 'active-link-menu'}>New Blog</Link> 
+                <Link to="/colorpicker"  className= {location.pathname == '/colorpicker' && 'active-link-menu'}>Color Picker</Link> 
+                <Link to="/search"   className= {location.pathname == '/search' && 'active-link-menu'}>Live Search</Link> 
+                <Link to="/handle"   className= {location.pathname == '/handle' && 'active-link-menu'}>Handle Elements</Link> 
             </div>
         </nav>
      );
