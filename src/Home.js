@@ -18,28 +18,30 @@ const Home = () => {
     //     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     // ]);
 
-    const {data, isPending, error} = useFetch('https://jsonplaceholder.typicode.com/posts');
 
     const [todos, setTodos] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/todos/")
-        .then((res) => {
-            if (!res.ok) {
-                throw Error("Could not fetch todos");
-            }
-            return res.json();
-        })
-        .then((data) => {
-            setTodos(data);  // directly store the API response
-            setLoading(false);
-        })
-        .catch((err) => {
-            console.error(err.message);
-            setLoading(false);
-        });
-    }, []);
+    // useEffect(() => {
+    //     fetch("https://jsonplaceholder.typicode.com/todos/")
+    //     .then((res) => {
+    //         if (!res.ok) {
+    //             throw Error("Could not fetch todos");
+    //         }
+    //         return res.json();
+    //     })
+    //     .then((data) => {
+    //         setTodos(data);  // directly store the API response
+    //         setLoading(false);
+    //     })
+    //     .catch((err) => {
+    //         console.error(err.message);
+    //         setLoading(false);
+    //     });
+    // }, []);
+
+
+    const {data, isPending, error} = useFetch('https://jsonplaceholder.typicode.com/posts');
 
 
     
@@ -111,9 +113,9 @@ const Home = () => {
             */}
 
             { error && <div>{ error }</div> }
-            { isPending &&  <div><img width="80" src="/Loading_icon.gif"/></div> }
-            { data && <List displayUser={true} list={data} title = "Home Page"  clicked={clicked}   />}
             
+            {<List isPending={isPending} displayUser={true} list={data} title = "Home Page"  clicked={clicked}   />}
+             
             {/* <div className="todos">
                 {todos.filter( (item) => item.id == 1 || item.id == 2 ).map((todo) => (
                     <div key={todo.id}>

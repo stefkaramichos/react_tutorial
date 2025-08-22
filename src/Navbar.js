@@ -15,6 +15,7 @@ const Navbar = () => {
             return false;
         }
     }
+    
 
     return ( 
         <nav className="navbar">

@@ -7,6 +7,7 @@ const List = ( { list, title, clicked, displayUser, isPending } ) => {
     return (
         <div className="blogs">
             <h2>{title}</h2>
+            {console.log(isPending)}
             {isPending &&  <div><img width="80" src="/Loading_icon.gif"/></div> }
             {list && list.map((item, index) => (
                 <div className="blog-preview" key={item.id}>
