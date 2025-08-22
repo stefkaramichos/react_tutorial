@@ -36,7 +36,7 @@ const HandleElements = () => {
 
 
     return ( 
-        <div className="handle-elements">
+        <div className="handle-elements box-size">
             <h2>Handle Elements</h2>
             {
                 elementss && elementss.map((elemen) => (

@@ -9,7 +9,7 @@ import ColorPicker from './ColorPicker';
 import Search from './Search';
 import HandleElements from './HandleElements';
 import UserBlogs from './UserBlogs';
-
+import Footer from './Footer';
 
 function App() {
   const title = "Welcome to the new blog";
@@ -49,6 +49,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </div>
     </Router>
   );

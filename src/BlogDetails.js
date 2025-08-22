@@ -10,7 +10,7 @@ const BlogDetails = () => {
   );
 
   return (
-    <div className="blog-details blog-page">
+    <div className="blog-details blog-page box-size">
       {error && <div>{error}</div>}
       {isPending && <div><img width="80" src="/Loading_icon.gif"/></div>}
       {data && (

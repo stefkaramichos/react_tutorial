@@ -9,7 +9,7 @@ const UserBlogs = () => {
     const {data, isPending, error} = useFetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
 
     return ( 
-        <div className="user-blogs">
+        <div className="user-blogs box-size">
             <List isPending={isPending} displayUser={false} list={data} title={`Blogs by user ${userId}`} />
         </div>
      );

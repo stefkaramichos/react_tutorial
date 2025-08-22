@@ -103,7 +103,7 @@ const Home = () => {
     }
 
     return (  
-        <div className="home">
+        <div className="home box-size">
             {/* <h2>Home Page</h2> */}
             {/* <p>{ name }</p>
             <p> { age } </p>

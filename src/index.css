@@ -102,9 +102,21 @@
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
   padding: 13px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   
+}
+.box-size {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 13px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.box-size.search{
+  max-width: 600px;
 }
 .create label {
   text-align: left;
@@ -112,7 +124,7 @@
 }
 .create h2 {
   font-size: 20px;
-  color:;
+  color:#f1356d;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -154,4 +166,44 @@
   color: white;
   background-color: #f1356d;
   border-radius: 8px;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* viewport height */
+}
+
+.content {
+ 
+  display: flex;
+  width: 100%;
+  min-height: 70vh; 
+  align-items: center;
+}
+.content:has(.box-size):has(.search){
+  display: block;
+}
+
+.footer {
+  background-color: #f1356d;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* pushes the footer to the bottom */
+  p{
+     color: white;
+  }
+}
+
+.search-by{
+  padding: 30px;
+  span{
+    border: #f1356d 1px solid ;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
 }
