@@ -8,7 +8,7 @@ const HandleElements = () => {
         { id: 3, name: 'Element 3' }
     ]);
 
-    const [deletedId, setDeletedId] = useState(null);
+    
 
     const styles ={
         div: {
@@ -25,7 +25,9 @@ const HandleElements = () => {
     const addElement = () => {
         const inputValue = document.querySelector('input[type="text"]').value;
         document.querySelector('input[type="text"]').value = ''; // Clear input field
-        setElementss([...elementss, { id: elementss.length + 1, name: inputValue }]);
+        if(inputValue.trim() !== '') {
+            setElementss([...elementss, { id: elementss.length + 1, name: inputValue }]);
+        }
     }
 
     const deleteElemet = (id) => {

@@ -1,14 +1,26 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const Navbar = () => {
    
-    let location = useLocation();
+    const location = useLocation();
+    const history = useHistory();
+    const checkHistory = () => {
+        if (history.length > 2) {   
+            return true;
+        } else{
+            return false;
+        }
+    }
 
     return ( 
         <nav className="navbar">
+            {checkHistory() && <span onClick={() => { history.go(-1) }} style={{cursor: 'pointer'}} className="back-btn">
+                  ⬅
+            </span> }
             <h1>Stef Karamichos</h1> 
             <div className="links">
                 <Link to="/"   className= {location.pathname == '/' && 'active-link-menu'} >Home</Link>

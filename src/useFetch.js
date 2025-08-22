@@ -12,7 +12,7 @@ const useFetch = (url) => {
         setIsPending(true);
 
         setTimeout(() => {
-            console.log(isPending);
+           
             fetch(url , { signal: abortCont.signal })
             .then((res) => {
                 if(!res.ok){
@@ -26,7 +26,6 @@ const useFetch = (url) => {
             }) 
             .catch((err) => {
                 if (err.name === 'AbortError') {
-                    console.log('Fetch aborted');
                 } else{
                     setError(err.message);
                     setIsPending(false);
