@@ -8,6 +8,7 @@ import NotFound from './NotFound';
 import ColorPicker from './ColorPicker';
 import Search from './Search';
 import HandleElements from './HandleElements';
+import UserBlogs from './UserBlogs';
 
 
 function App() {
@@ -27,12 +28,15 @@ function App() {
           </Route>  
           <Route exact path="/create" >
             <Create />  
-          </Route>
+          </Route> 
           <Route exact path="/blogs/:id">
             <BlogDetails />
           </Route>
           <Route exact path="/colorpicker">
             <ColorPicker />
+          </Route>
+          <Route exact path="/blogs/user/:userId">
+            <UserBlogs />
           </Route>
           <Route exact path="/search">
             <Search />

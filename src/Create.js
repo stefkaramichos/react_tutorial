@@ -30,8 +30,6 @@ const Create = () => {
             setBody('');            
             setAuthor('');
         })
-
-
     }
 
     return ( 

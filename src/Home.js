@@ -102,16 +102,17 @@ const Home = () => {
 
     return (  
         <div className="home">
-            <h2>Home Page</h2>
-            <p>{ name }</p>
+            {/* <h2>Home Page</h2> */}
+            {/* <p>{ name }</p>
             <p> { age } </p>
             <button className="btn" onClick={handleClick}>change name</button> 
             <button className="btn" onClick={(e) => handelClickAgain('stef', e) }>Click Me Again</button> 
             <button className="btn" onClick={handleAge}>Increase Age</button>
-  
+            */}
+
             { error && <div>{ error }</div> }
             { isPending &&  <div><img width="80" src="/Loading_icon.gif"/></div> }
-            { data && <List list={data} title = "test title" changeClikedValue={changeClikedValue} clicked={clicked}   />}
+            { data && <List displayUser={true} list={data} title = "Home Page"  clicked={clicked}   />}
             
             {/* <div className="todos">
                 {todos.filter( (item) => item.id == 1 || item.id == 2 ).map((todo) => (
